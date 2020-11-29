@@ -1,0 +1,40 @@
+<h1>Diary-App Register Page </h1>
+
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+  <div class="register">
+    <label for="name"><b> Name
+      </b>
+    </label><br>
+    <input type="text" name="name" id="name" ngModel placeholder="Name" required #name=ngModel><br>
+    <span *ngIf="name.invalid">Name is required!</span><br><br>
+
+    <label for="email"><b> Email
+      </b>
+    </label><br>
+    <input type="text" name="email" id="email" ngModel placeholder="Email" required #email=ngModel><br>
+    <span *ngIf="email.invalid">Email is required!</span><br><br>
+    <label for="password"><b>Password
+      </b>
+    </label><br>
+    <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+      required id="password" #password=ngModel placeholder="Password" ngModel><br>
+    <span *ngIf="password.invalid">
+      <span *ngIf="password.errors.required">Password is required!</span>
+      <span *ngIf="password.errors.pattern"> Password must contain Must contain at least one number and one uppercase
+        and lowercase letter, and at least 8 or more characters</span>
+    </span><br><br>
+    <label for="password_confirmation"><b>Confirm Password
+      </b>
+    </label><br>
+    <input type="password" name="password_confirmation" required id="password_confirmation"
+      #password_confirmation=ngModel placeholder="Password" ngModel><br><br><br>
+    <span *ngIf="password_confirmation.invalid">
+      <span *ngIf="password_confirmation.errors.required">Password is required!</span><br>
+      <span *ngIf="password.value.match(password_confirmation.value)">Password and Confirm Password should be
+        same!</span><br><br>
+    </span>
+    <button type="submit" [disabled]="!registerForm.valid" name="submit" id="submit">Register</button><br><br>
+    <span>Already registered? <a href="http://localhost:4200/login"> Login</a></span><br><br>
+  </div>
+</form>

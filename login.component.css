@@ -1,0 +1,45 @@
+h1{  
+    text-align: center;  
+    color: #144852;  
+    padding: 20px;  
+}  
+
+.login{  
+    width: 382px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20 0 0 450px;  
+    padding: 80px;  
+    background: #9fa2f5;  
+    border-radius: 15px ;  
+      
+}  
+
+#email{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+
+#password{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}
+
+#submit{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue; 
+}  
+span{   
+    font-size: 17px;  
+}  

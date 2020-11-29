@@ -1,0 +1,19 @@
+<h1>Diary-App Login Page </h1>
+
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <div class="login">
+    <label for="email"><b> Email
+      </b>
+    </label><br>
+    <input type="text" name="email" id="email" ngModel placeholder="Email" required #email=ngModel><br>
+    <span *ngIf="email.invalid" class="error">Email is required!</span><br><br>
+    <label><b>Password
+      </b>
+    </label><br>
+    <input type="password" name="password" id="password" placeholder="Password" ngModel required><br><br><br>
+    <button type="submit" id="submit">Submit</button><br><br>
+    <input type="checkbox" id="check">
+    <span>Remember me? </span>
+    <span> Not registered? <a href="http://localhost:4200/register"> Register</a></span><br><br>
+  </div>
+</form>

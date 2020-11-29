@@ -1,0 +1,18 @@
+<p><strong>Name:</strong> {{user.username}}</p>
+
+<div class = "area">
+    <form #createForm = "ngForm" (ngSubmit) = "onSubmit(createForm)">
+    <label for="date"><b>Date
+    </b>
+    </label><br>   
+    <input name= "date" id="date" type="date" ngModel ><br><br>
+    <label for="title"><b>Title  
+    </b>
+    </label><br> 
+    <input name = "title" id="title" type="text" placeholder="title" required style="width: 400px;" ngModel><br><br>
+    <textarea name="description" rows="30" cols="100" placeholder="Write Something here.." ngModel required></textarea>
+    <button type= "submit" style="height: 30px;">Save</button>
+    <button (click) = "gotoListPage('list')" style="margin-left: 12px; height: 30px;">Cancel</button><br>
+    </form>
+</div>
+

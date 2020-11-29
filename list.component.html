@@ -1,0 +1,26 @@
+<h1 style="background-color:#9fa2f5;">Diary-App List</h1>
+<hr>
+
+
+<table id="tab" align="center" border = "1" style="width: fit-content;">
+    <thead>
+        <tr>
+            <th>Date </th>
+            <th>Title</th>
+            <th> Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let note of notes; let i = index">
+            <td>{{note.date}}</td>
+            <td>{{note.title}}</td>
+            <td>{{note.description}}</td>
+            <td (click) = "delete(i)">Delete</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+
+<button style="height: 35px; width: 50px;" (click)= "gotoCreatePage('create')">+</button>
+<button (click) = clearAll() type = "button" style="height: 35px; margin-left: 12px">Clear All</button><br><br><br>
